@@ -1,6 +1,6 @@
 ### About
 
-template for generating static sites
+generic scheduler app
 
 ### Setup
 
