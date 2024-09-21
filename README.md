@@ -13,3 +13,10 @@ generic scheduler app
 ### Build
 
 `npm run build`
+
+### Todos
+
+1. layouts
+2. components
+3. timeline
+4. tasks
