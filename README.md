@@ -1,11 +1,15 @@
-### Site
-https://johniel-cenabre.github.io
+### About
+
+template for generating static sites
 
 ### Setup
-```npm install```
+
+`npm install`
 
 ### Run Local
-```npm start```
+
+`npm start`
 
 ### Build
-```npm run build```
+
+`npm run build`
