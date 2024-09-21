@@ -4,10 +4,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SWRConfig } from "swr";
 
 import "./index.css";
-import ThemeSt from "./styles/Theme";
-import Home from "./pages/Home";
 
-const App = () => {
+export default function App() {
   return (
     <SWRConfig
       value={{
@@ -15,16 +13,12 @@ const App = () => {
           fetch(resource, init).then((res) => res.json()),
       }}
     >
-      <ThemeSt>
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-          </Routes>
-        </Router>
-      </ThemeSt>
+      <Router>
+        <Routes></Routes>
+      </Router>
     </SWRConfig>
   );
-};
+}
 
 ReactDOM.render(
   <React.StrictMode>

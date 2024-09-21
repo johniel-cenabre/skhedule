@@ -3,17 +3,17 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
   entry: {
-    main: join(__dirname, "./src/index.js"),
+    main: join(__dirname, "./src/index.tsx"),
   },
   output: {
-    path: join(__dirname, "./"),
+    path: join(__dirname, "./dist"),
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.tsx?$/,
+        use: "ts-loader",
         exclude: /node_modules/,
-        use: ["babel-loader"],
       },
       {
         test: /\.css$/,
@@ -26,7 +26,7 @@ const config = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   devtool: false,
   plugins: [
