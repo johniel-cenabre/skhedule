@@ -3,7 +3,10 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SWRConfig } from "swr";
 
-import "./index.css";
+import styles from "./index.module.css";
+import Footer from "./layouts/footer";
+import Header from "./layouts/header";
+import Main from "./layouts/main";
 
 export default function App() {
   return (
@@ -13,9 +16,15 @@ export default function App() {
           fetch(resource, init).then((res) => res.json()),
       }}
     >
-      <Router>
-        <Routes></Routes>
-      </Router>
+      <div className={styles.app}>
+        <Header />
+        <Main>
+          <Router>
+            <Routes></Routes>
+          </Router>
+        </Main>
+        <Footer />
+      </div>
     </SWRConfig>
   );
 }

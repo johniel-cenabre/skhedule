@@ -1,0 +1,5 @@
+.container {
+  min-height: 3vh;
+  display: flex;
+  align-items: center;
+}

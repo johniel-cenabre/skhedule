@@ -17,7 +17,16 @@ const config = {
       },
       {
         test: /\.css$/,
-        use: ["style-loader", "css-loader"],
+        use: [
+          "style-loader",
+          {
+            loader: "css-loader",
+            options: {
+              importLoaders: 1,
+              modules: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(jpg|jpe?g|png|gif|svg)$/i,
