@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { SWRConfig } from "swr";
+import Calendar from "./components/calendar";
 
 import styles from "./index.module.css";
 import Footer from "./layouts/footer";
@@ -19,9 +20,10 @@ export default function App() {
       <div className={styles.app}>
         <Header />
         <Main>
-          <Router>
+          {/* <Router>
             <Routes></Routes>
-          </Router>
+          </Router> */}
+          <Calendar />
         </Main>
         <Footer />
       </div>
